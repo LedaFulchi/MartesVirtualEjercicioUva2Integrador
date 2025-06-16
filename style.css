@@ -2,15 +2,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Asegura que el body ocupe al menos el alto de la ventana */
-    margin: 0; 
-    background-color: rgb(255, 255, 255); 
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de tema */
 }
 
 main {
     flex-grow: 1; /* Permite que el main crezca para ocupar el espacio restante */
 }
-
-
 
 /*HEADER & FOOTER*/
 header{
@@ -18,14 +17,15 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgb(28, 51, 63); 
+    background-color: rgb(28, 51, 63);
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de tema */
 }
 
 .nav-link{
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     font-size: 0.938em;
-}        
+}
 .nav-link:hover{
     color: white;
     text-decoration: underline;
@@ -36,26 +36,40 @@ header{
     font-size: 0.938em;
 }
 
-        
+
 .logo-uade{
-    width: 6em; 
-    height: auto; 
+    width: 6em;
+    height: auto;
     margin-right: auto; /* lleva la navegación a la derecha */
     border-radius: 5px;
 }
 
+/* Estilos para los botones de tema */
+.theme-buttons {
+    display: flex;
+    gap: 20px;
+    margin-left: 10px; /* Espacio entre la navegación y los botones */
+}
+
+.theme-button {
+    background: white;
+    border:none;
+    cursor: pointer;
+    padding: 0;
+}
+
 /* Estilos para los enlaces de navegación del footer */
 footer .nav-item-footer .nav-link {
-    font-family: 'TuFuentePersonalizada', sans-serif; 
-    font-size: 0.9em; 
-    color: #555; 
+    font-family: 'TuFuentePersonalizada', sans-serif;
+    font-size: 0.9em;
+    color: #555;
     text-decoration: none;
 }
 
 /* Estilos para el hover de los enlaces del footer */
 footer .nav-item-footer .nav-link:hover {
     color: #007bff; /* Cambia el color al pasar el mouse */
-    text-decoration: underline; /* para el subrayado al pasar el mouese sobre el mismo*/
+    text-decoration: underline; /* para el subrayado al pasar el mouse sobre el mismo*/
 }
 
 
@@ -70,8 +84,8 @@ table{
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border-radius: 30px; 
-    overflow: hidden; 
+    border-radius: 30px;
+    overflow: hidden;
     box-shadow: 5PX 5px 5px  rgb(0, 40,60)
 }
 
@@ -84,25 +98,26 @@ th, td{
     border: 2px solid  rgb(19, 45, 58);
     padding: 8px;
     text-align: center;
+    color: white;
 }
 
 th{
     background-color: rgb(19, 45, 58);
-    color: white;
+    color: rgb(247, 244, 244);
 }
 .titulo-home, .titulo-avisos{
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.563em;
     text-align: left;
-    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60); 
-    border-radius: 10px; 
+    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60);
+    border-radius: 10px;
 }
 .home-presentacion{
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.25em;
     text-align: center;
     box-shadow: 5px 5px 5px 5px  rgb(0, 40,60);
-    border-radius: 20px; 
+    border-radius: 20px;
 }
 
 /*AVISOS*/
@@ -112,7 +127,7 @@ th{
     font-size: 1.25em;
     text-align: center;
     box-shadow: 5px 5px 5px 5px  rgb(0, 40,60);
-    border-radius: 20px; 
+    border-radius: 20px;
 }
 .titulo-avisos-materia-pendiente{
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -125,12 +140,12 @@ th{
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.563em;
     text-align: left;
-    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60); 
+    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60);
     border-radius: 10px;
 }
 .sobremi{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     max-width: 960px;
     margin: 0 auto;
     background-color: #ffff;
@@ -195,8 +210,8 @@ th{
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.563em;
     text-align: left;
-    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60); 
-    border-radius: 10px;  
+    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60);
+    border-radius: 10px;
 }
 .lista-materias2025-materias {
     list-style-type: square; /* Cambia el estilo de los puntos de la lista */
@@ -205,28 +220,32 @@ th{
 }
 
 .lista-materias2025-materias li {
-    margin-bottom: 10px; 
-    font-size: 1.1em; 
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
-
+.diseñoydesarrollo{
+    color: blue;
+}
 /*DISEÑO Y DESARROLLO WEB*/
 .titulo-diseñoweb{
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.563em;
     text-align: left;
-    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60); 
-    border-radius: 10px;  
+    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60);
+    border-radius: 10px;
 }
 
 .contenedor-principal {
     display: flex;
     gap: 10px; /* Espacio entre los contenedores principales */
     margin-bottom: 20px; /* Espacio antes del contenedor inferior */
+    align-items: stretch;
 }
 
 .columna-izquierda {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     width: 48%; /* Aproximadamente la mitad del ancho */
     gap: 20px; /* Espacio entre los contenedores de la izquierda */
 }
@@ -240,17 +259,11 @@ th{
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60); 
+    box-shadow: 5px 5px 5px 5px  rgb(0, 40,60);
 }
-
-.bibliografia, .actividades, .fechas {
-    font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.563em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: black;
+.columna-izquierda .caja-contenedor:last-child {
+    flex-grow: 1;
 }
-
 .contenedor-inferior {
     width: 100%;
     padding: 0.938em;
@@ -262,12 +275,13 @@ th{
     margin-top: auto;
     margin-bottom: 10px;
 }
-.bibliografia-data,.fechas-examen{
+
+.bibliografia, .actividades, .fechas {
     font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 0.938em;;
+    font-size: 1.563em;
     margin-top: 0;
     margin-bottom: 10px;
-    color: black;
+    color: white;
 }
 
 .uva{
@@ -296,7 +310,14 @@ th{
     
 }
 
-
+.diseño-ejercicio-titulo-punto{
+    font-family: "Montserrat", cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.938em;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
 
 /*CONTACTO*/
 .titulo-contacto{
@@ -331,5 +352,3 @@ th{
     border-radius: 10px;
     cursor: pointer;
 }
-
-
