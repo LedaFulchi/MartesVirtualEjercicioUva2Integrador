@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const navLinks = document.querySelectorAll('.nav-pills .nav-link');
     
-    const mainContainers = document.querySelectorAll('.contenedor-principal, .caja-contenedor, .columna-derecha, .contenedor-inferior, .sobremi, .additional-info, .tabla-materias'); // Agregué .tabla-materias aquí para el fondo
+    const mainContainers = document.querySelectorAll('.contenedor-principal, .caja-contenedor, .columna-derecha, .contenedor-inferior, .sobremi, .additional-info, .tabla-materias'); // Agregado .tabla-materias aquí para el fondo
 
     const elementsWithShadow = document.querySelectorAll('.titulo-home, .titulo-avisos, .home-presentacion, table, .titulo-sobremi, .sobremi, .profile-image, .titulo-materias2025, .caja-contenedor, .contenedor-inferior, .titulo-diseñoweb, .uva, .titulo-contacto');
 
@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
             link.style.color = ''; 
         });
 
-        // Hacemos que los th sean blancos en modo claro
+        //  hace que los th sean blancos en modo claro
         tableHeaders.forEach(th => {
-            th.style.color = 'white'; // Asegura texto blanco para los th en modo claro
+            th.style.color = 'white'; // Aseguro texto blanco para los th en modo claro
         });
 
         navLinks.forEach(link => {
@@ -119,12 +119,12 @@ document.addEventListener('DOMContentLoaded', function() {
         applyLightMode();
     }
 
-    // Event listeners para los botones
+    // Event listeners para los botones de dark y light
     lightModeBtn.addEventListener('click', applyLightMode);
     darkModeBtn.addEventListener('click', applyDarkMode);
 });
 
-// Tu función validarContacto() se mantiene igual
+//  función validarContacto() 
 function validarContacto() {
     const nombreApellidoInput = document.getElementById('nombreApellido');
     const nombreApellido = nombreApellidoInput.value.trim();
